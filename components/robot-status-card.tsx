@@ -22,7 +22,7 @@ export function RobotStatusCard() {
             Robot Status
           </CardTitle>
           <Badge className="bg-chart-1/10 text-chart-1 border-chart-1/20">
-            <span className="mr-1.5 size-2 rounded-full bg-chart-1 animate-pulse" />
+            <span className="inline-block mr-1.5 size-2 rounded-full bg-chart-1 animate-pulse" />
             Online
           </Badge>
         </div>

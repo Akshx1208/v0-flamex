@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from '@/components/theme-provider'
+import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
   title: 'Flame-X Dashboard | Firefighting Robot Monitoring',
@@ -35,10 +37,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark bg-background">
+    <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased bg-background">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          {children}
+          {process.env.NODE_ENV === 'production' && <Analytics />}
+        </ThemeProvider>
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   )

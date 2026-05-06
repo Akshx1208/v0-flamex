@@ -56,9 +56,9 @@ export function StatsCards() {
                   {stat.trend === 'up' ? (
                     <ArrowUp className="size-3 text-chart-1" />
                   ) : (
-                    <ArrowDown className="size-3 text-chart-1" />
+                    <ArrowDown className="size-3 text-chart-4" />
                   )}
-                  <span className={stat.trend === 'up' ? 'text-chart-1' : 'text-chart-1'}>
+                  <span className={stat.trend === 'up' ? 'text-chart-1' : 'text-chart-4'}>
                     {stat.change}
                   </span>
                   <span className="text-muted-foreground">vs last hour</span>

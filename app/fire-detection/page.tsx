@@ -8,7 +8,8 @@ import { Flame, MapPin, Clock, CheckCircle, AlertTriangle } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { formatDistanceToNow } from 'date-fns'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const severityColors: Record<string, string> = {
   high:   'bg-destructive/10 text-destructive border-destructive/20',

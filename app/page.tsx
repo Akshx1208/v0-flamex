@@ -10,7 +10,8 @@ import { RobotStatusCard } from '@/components/robot-status-card'
 import { ActivityFeed } from '@/components/activity-feed'
 import { supabase } from '@/lib/supabase'
 
-export const revalidate = 30 // revalidate every 30 seconds
+export const dynamic = 'force-dynamic'
+export const revalidate = 0 // revalidate every 30 seconds
 
 async function getDashboardData() {
   const [tempRes, gasRes, fireRes, activityRes, robotRes] = await Promise.all([

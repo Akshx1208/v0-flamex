@@ -6,7 +6,8 @@ import { Thermometer, Bell, Bot, Shield, Save } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { Badge } from '@/components/ui/badge'
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 async function getData() {
   const { data } = await supabase.from('system_settings').select('key, value, description')

@@ -8,7 +8,8 @@ import { supabase } from '@/lib/supabase'
 import { formatDistanceToNow } from 'date-fns'
 import { AcknowledgeButton } from '@/components/acknowledge-button'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const severityConfig: Record<string, { label: string; badge: string; border: string }> = {
   critical: { label: 'Critical', badge: 'bg-destructive/10 text-destructive border-destructive/20', border: 'border-l-4 border-l-destructive' },

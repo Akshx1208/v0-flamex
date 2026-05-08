@@ -8,7 +8,8 @@ import { Flame, Bot, CheckCircle, AlertTriangle, Thermometer, Info, Shield } fro
 import { supabase } from '@/lib/supabase'
 import { formatDistanceToNow } from 'date-fns'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const categoryColors: Record<string, string> = {
   fire:   'bg-chart-4/10 text-chart-4 border-chart-4/20',

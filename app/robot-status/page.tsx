@@ -8,7 +8,8 @@ import { Bot, Cpu, Thermometer, Clock, Wrench, CheckCircle } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { formatDistanceToNow } from 'date-fns'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 async function getData() {
   const [robotRes, diagRes, missionsRes] = await Promise.all([

@@ -7,7 +7,8 @@ import { Badge } from '@/components/ui/badge'
 import { Thermometer, ArrowUp, Minus } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const statusConfig: Record<string, { label: string; className: string }> = {
   normal:   { label: 'Normal',   className: 'bg-chart-1/10 text-chart-1 border-chart-1/20' },

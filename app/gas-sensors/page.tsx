@@ -8,7 +8,8 @@ import { Progress } from '@/components/ui/progress'
 import { Wind, Flame, CloudFog, CheckCircle, AlertTriangle } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const typeConfig: Record<string, { icon: typeof Wind; color: string; bg: string }> = {
   gas:   { icon: Wind,     color: 'text-chart-3', bg: 'bg-chart-3/10' },
